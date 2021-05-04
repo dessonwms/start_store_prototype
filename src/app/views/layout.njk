@@ -5,24 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% block head %}
-        <title>Gym Manager</title>
+        <title>Start Store</title>
     {% endblock %}
 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="/styles.css">
 
 </head>
 <body>
-    <header>
-      <div class="links"> 
-        <a href="/instructors">Instrutores</a>    
-        <a href="/members">Membros</a>
-      </div>
-    </header>
+    {% include "parts/header.njk" %}
 
     {% block content %}{% endblock %}
 
-    <script src="/scripts.js"></script>
+    {% include "parts/footer.njk" %}
   
 </body>
 </html>
