@@ -37,6 +37,7 @@ module.exports = {
         const productId = results.rows[0].id
 
         // Executa as promises para cadastro dos arquivos
+        console.log(req.files)
         const filesPromise = req.files.map(file => File.create({...file, product_id: productId}))
         await Promise.all(filesPromise)
 

@@ -11,6 +11,8 @@ module.exports = {
             ) VALUES ($1, $2, $3)
             RETURNING id
         `
+        path = path.replace(/\\/g, "/")
+
         const values = [
             filename,
             path,
