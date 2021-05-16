@@ -19,8 +19,11 @@ module.exports = {
         const results = await db.query(query)
         return results.rows[0]
     },
-    async create(){
+    async create(data){
         try {
+
+            console.log(data)
+
             const query = `
             INSERT INTO users (
                 name,
@@ -48,8 +51,8 @@ module.exports = {
             const results = await db.query(query, values)
 
             return results.rows[0].id
-        } catch (error) {
-            
+        } catch (err) {
+            console.error(err)
         }
     }
 }
